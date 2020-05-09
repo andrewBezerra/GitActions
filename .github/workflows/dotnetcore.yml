@@ -17,9 +17,8 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
-    - name: Access project folder
-      run: cd siteangular
     - name: Build
       run: dotnet build siteangular  
+      working-directory: .\SiteAngular
     - name: Test
       run: dotnet test --no-restore --verbosity normal
